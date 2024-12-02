@@ -24,3 +24,21 @@ provide link and website for automatic learning
 
 
 
+
+
+
+
+# Dataset
+
+## robot manipulation
+
+| Dataset       | Website                                                 |
+| ------------- | ------------------------------------------------------- |
+| Jacquard      | https://jacquard.liris.cnrs.fr/                         |
+| cornell_grasp | https://www.kaggle.com/datasets/oneoneliu/cornell-grasp |
+|               |                                                         |
+
+
+
+
+
