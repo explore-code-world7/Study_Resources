@@ -70,5 +70,9 @@
 - 安装过程中可能会要求你输入管理员密码。
 - 如果你在安装或使用过程中遇到问题，可以查阅 Cisco 的文档或联系你的 IT 支持团队。
 
+
+# private internet access
+link: https://zh.safetydetectives.com/blog/%E6%9C%80%E4%BD%B3%E4%B8%AD%E5%9B%BD-vpn/
+
 # privateVPN
 link: https://privatevpn.com/support/getting-started/linux/debian/network-manager-udp-recommended
