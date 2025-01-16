@@ -1,25 +1,21 @@
-## 代理软件
-
-* hiddify：https://github.com/hiddify/hiddify-app/releases
-* 使用方法：
-
-1. 导入代理订阅链接
-2. 点击下面的Hiddify连接
-3. 选择节点
-4. 不要选择系统代理，要么仅代理，要么VPN
+# hiddify
+* https://github.com/hiddify/hiddify-app/releases
+## 使用方法：
+1. 从第一次连接开始,就sudo用VPN
+2. 导入代理订阅链接
+3. 点击下面的Hiddify连接
+4. 选择节点
+*  不要选择系统代理，要么仅代理，要么VPN
 
 ## 安全配置
-
 1. DNS选择DoH，
    1. 远程：https://cloudflare-dns.com/dns-query
    2. 本地：https://223.5.5.5/dns-query
-
 2. 连接选择混合端口
-3. sudo 启动，选择VPN模式：
 
 ![image-20241202154238675](assets/image-20241202154238675.png)
 
-4. 路由选项
+3. 路由选项
 
 ### 1. 解析目标地址（Resolve Target Address）
 
