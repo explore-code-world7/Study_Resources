@@ -35,5 +35,5 @@
 5. WARP——选择通过代理连接WARP
 
 # xmind software
-main page: https://xmind.app/download/
-download link: https://xmind.app/desktop/thank-you-for-downloading/?download=linux_deb
+* main page: https://xmind.app/download/
+* download link: https://xmind.app/desktop/thank-you-for-downloading/?download=linux_deb
