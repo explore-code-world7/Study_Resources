@@ -69,3 +69,6 @@
 - 确保你有适当的权限和许可证来使用 Cisco AnyConnect。
 - 安装过程中可能会要求你输入管理员密码。
 - 如果你在安装或使用过程中遇到问题，可以查阅 Cisco 的文档或联系你的 IT 支持团队。
+
+# privateVPN
+link: https://privatevpn.com/support/getting-started/linux/debian/network-manager-udp-recommended
