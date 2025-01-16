@@ -37,3 +37,35 @@
 # xmind software
 * main page: https://xmind.app/download/
 * download link: https://xmind.app/desktop/thank-you-for-downloading/?download=linux_deb
+
+`vpn-connect` 是 Cisco AnyConnect Secure Mobility Client 的命令行工具。它通常用于连接到 Cisco VPN。这个工具是 Cisco 提供的，专门用于与其 VPN 解决方案进行交互。
+
+如果你想在 Ubuntu 上使用 `vpn-connect`，你需要安装 Cisco AnyConnect 客户端。请注意，Cisco AnyConnect 客户端通常不是通过 Ubuntu 的标准软件包管理器（如 `apt`）直接安装的，而是需要从 Cisco 的官方网站或通过你的组织获取。
+
+
+# vpn-connect
+## 安装 Cisco AnyConnect
+
+1. **获取安装包**：从 Cisco 的官方网站或你的组织获取 Cisco AnyConnect 的安装包。通常是一个 `.tar.gz` 或 `.sh` 文件。
+
+2. **解压和安装**：
+   - 如果是 `.tar.gz` 文件，首先解压：
+     ```bash
+     tar -xvzf anyconnect-linux64-*.tar.gz
+     ```
+   - 进入解压后的目录：
+     ```bash
+     cd anyconnect-*
+     ```
+   - 运行安装脚本：
+     ```bash
+     sudo ./install.sh
+     ```
+
+3. **使用 `vpn-connect`**：安装完成后，你应该能够使用 `vpn-connect` 命令来连接到 VPN。
+
+## 注意事项
+
+- 确保你有适当的权限和许可证来使用 Cisco AnyConnect。
+- 安装过程中可能会要求你输入管理员密码。
+- 如果你在安装或使用过程中遇到问题，可以查阅 Cisco 的文档或联系你的 IT 支持团队。
