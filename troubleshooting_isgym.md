@@ -62,7 +62,7 @@ trusted-host=mirrors.aliyun.com
 ```
 
 ## ModuleNotFoundError: No module named 'isaacgymenvs.tasks.factory'
-* ==implement following cmd for each decent python project== to install related packages
+* **implement following cmd for each decent python project** to install related packages
 ```bash
 pip install -e . # in isaacgym category
 ```
