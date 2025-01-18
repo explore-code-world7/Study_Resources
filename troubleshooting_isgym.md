@@ -27,3 +27,11 @@ sudo apt-get install --only-upgrade libstdc++6
 mv ${YOUR_CONDA_ENV}/lib/libstdc++* ${YOUR_CONDA_ENV}/lib/_unused
 cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6 ~/miniconda3/envs/env_name/lib/
 ```
+
+# [Error] [carb.gym.plugin] cudaImportExternalMemory failed on rgbImage buffer with error 999
+See dicusstion [here](https://forums.developer.nvidia.com/t/cudaimportexternalmemory-failed-on-rgbimage/212944)
+To save current, 
+## solution
+```bash
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
+```
