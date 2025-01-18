@@ -1,5 +1,6 @@
 # hiddify
 * https://github.com/hiddify/hiddify-app/releases
+* sometimes hiddify fail due to wired network's inability to conenct despite their icon signal is light, log in the firefox first
 ## 使用方法：
 1. 从第一次连接开始,就sudo用VPN
 2. 导入代理订阅链接
