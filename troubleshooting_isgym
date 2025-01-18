@@ -1,6 +1,5 @@
+# subprocess.CalledProcessError: Command '['which', 'c++']' returned non-zero exit status 1
 
-
-# subprocess.CalledProcessError: Command '['which', 'c++']' returned non-zero exit status 1.
 lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 311, in check_compiler_ok_for_platform
     which = subprocess.check_output(['which', compiler], stderr=subprocess.STDOUT)
   File "/home/planet/miniconda3/envs/isgym/lib/python3.8/subprocess.py", line 415, in check_output
