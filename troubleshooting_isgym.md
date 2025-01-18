@@ -14,7 +14,8 @@ sudo apt install build-essentials
 ```
 
 
-#  ImportError: /home/user_name/miniconda3/envs/env_name//lib/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /home/planet/.cache/torch_extensions/py38_cu121/gymtorch/gymtorch.so)
+#  lib/libstdc++.so.6: version `GLIBCXX_3.4.32' not found
+ImportError: /home/user_name/miniconda3/envs/env_name/lib/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /home/planet/.cache/torch_extensions/py38_cu121/gymtorch/gymtorch.so)
 
 ## solution
 [link](https://stackoverflow.com/questions/76974555/glibcxx-3-4-32-not-found-error-at-runtime-gcc-13-2-0)
