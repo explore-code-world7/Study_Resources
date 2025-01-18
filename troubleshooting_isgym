@@ -15,5 +15,15 @@ sudo apt install build-essentials
 ```
 
 
-# 
+#  ImportError: /home/user_name/miniconda3/envs/env_name//lib/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /home/planet/.cache/torch_extensions/py38_cu121/gymtorch/gymtorch.so)
 
+## solution
+[link](https://stackoverflow.com/questions/76974555/glibcxx-3-4-32-not-found-error-at-runtime-gcc-13-2-0)
+
+```bash
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install --only-upgrade libstdc++6
+mv ${YOUR_CONDA_ENV}/lib/libstdc++* ${YOUR_CONDA_ENV}/lib/_unused
+cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6 ~/miniconda3/envs/env_name/lib/
+```
