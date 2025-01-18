@@ -9,5 +9,11 @@ lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 311, in check_co
     raise CalledProcessError(retcode, process.args,
 subprocess.CalledProcessError: Command '['which', 'c++']' returned non-zero exit status 1.
 
+## solution
+```cpp
+sudo apt install build-essentials
+```
+
+
 # 
 
