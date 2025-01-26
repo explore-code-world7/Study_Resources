@@ -1,4 +1,4 @@
-# texlive
+# texstudio
 link: https://tug.org/texlive/quickinstall.html
 ```sh
 sudo apt-get install texlive texstudio # for latex 
