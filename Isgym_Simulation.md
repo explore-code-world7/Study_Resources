@@ -22,3 +22,7 @@ NVIDIA的Isaac系列产品包括多个不同的工具和平台，每个工具都
    - 支持多种行业标准和格式，允许不同软件之间的协作。
 
 总结来说，Isaac Gym和Isaac Sim主要集中在机器人仿真和训练上，而Isaac Lab则是一个开发环境，Isaac Omniverse则是一个更通用的3D创作平台。选择哪个工具取决于具体的应用需求和开发目标。
+
+# Error List
+1. Excessive environment num may trigger sgement errors
+![图片](https://github.com/user-attachments/assets/feb18b42-e249-4211-9cde-0422c67fd7eb)
