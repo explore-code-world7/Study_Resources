@@ -13,7 +13,7 @@ NVIDIA的Isaac系列产品包括多个不同的工具和平台，每个工具都
   
 ![Link](https://docs.isaacsim.omniverse.nvidia.com/4.1.0/installation/requirements.html)
 
-![图片](https://github.com/user-attachments/assets/0d3d9e6a-aa98-47bf-b01f-49d0073a468f)
+![图片](https://github.com/user-attachments/assets/1ada97cd-a837-40f4-b3ee-1b435b6dbeb7)
 
 
 4. **Isaac Lab**：
