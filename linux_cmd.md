@@ -95,7 +95,7 @@ find . -type f -regex   '\./depth_env[0-9]+_cam2_frame1.jpg'
 cp $(ls | grep 'cam-0001-[0-9]{4}.png')  rgb/
 ```
 
-* find /ls 不支持{n}匹配
+* find /ls 不支持{n}匹配，也不支持\d
 
 
 # 命令行输出作为另一命令的输入
