@@ -1,5 +1,7 @@
 # COLLADA
-https://www.collada.org/2005/11/COLLADASchema/
+introduction: https://www.collada.org/2005/11/COLLADASchema/
+wiki: https://www.khronos.org/collada/wiki/Getting_started_with_COLLADA#Learn_about_COLLADA
+course: https://www.khronos.org/files/collada_spec_1_5.pdf
 
 COLLADA（Collaborative Design Activity）是一种开放的文件格式，用于在不同的3D软件和应用程序之间交换3D模型和场景数据。COLLADA 文件的扩展名通常为 `.dae`（Digital Asset Exchange）。
 
