@@ -25,6 +25,8 @@ export PATH=$PATH:/directory
 
 
 # regular strings
+link：https://www.runoob.com/regexp/regexp-syntax.html
+
 ## grammar
 正则表达式的基本语法包括多种元素和构造，用于匹配字符串中的特定模式。以下是一些常见的基本语法元素：
 
