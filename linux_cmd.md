@@ -93,13 +93,16 @@ find . -type f -regex   '\./depth_env[0-9]+_cam2_frame1.jpg'
 
 # 命令行输出作为另一命令的输入
 
-## 1. 命令替换
+## 1. 命令替换(Best!)
+* 可以使用反引号（`）或 $() 语法来将 find 命令的输出作为 cp 命令的参数。
+
 ```bash
 cp $(find . -name "*.txt") /path/to/destination/
 ```
 
 ## 2. --exec
 find 命令的 -exec 选项允许你对找到的每个文件执行一个命令。你可以在 -exec 后面直接使用 cp 命令。
+
 ```bash
 find . -name "*.txt" -exec cp {} /path/to/destination/ 
 ```
@@ -114,6 +117,7 @@ find . -name "*.txt" | xargs -I {} cp {} /path/to/destination/
 
 ## example
 * 查找后复制
+
 ```
 cp $(find . -type f -regex   '\./depth_env[0-9]+_cam2_frame1.jpg')  test/
 ```
