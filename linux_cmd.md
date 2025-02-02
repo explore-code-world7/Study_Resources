@@ -1,9 +1,9 @@
-# make file_reading todos
+# 把文件file转为todos
 ```
 printf "%s\n" *>> read.md
 ```
 
-# vi
+# 终端编辑器(vi,当nano不可用)
 * 删除整行——dd/D
 * 跳转到最后一行——G
 * 跳转到第一行——gg
@@ -11,14 +11,13 @@ printf "%s\n" *>> read.md
 * 跳转到上一行——o
 
 
-# snap
-
+# 软件包(snap+apt)
 ## 查看软件版本
 ```sh
 sudo snap info okular
 ```
 
-# export
+# 环境变量查看+修改
 ## $PATH
 ```sh
 export PATH=$PATH:/directory
