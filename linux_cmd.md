@@ -101,7 +101,7 @@ cp $(find . -name "*.txt") /path/to/destination/
 ## 2. --exec
 find 命令的 -exec 选项允许你对找到的每个文件执行一个命令。你可以在 -exec 后面直接使用 cp 命令。
 ```bash
-find . -name "*.txt" -exec cp {} /path/to/destination/ \;
+find . -name "*.txt" -exec cp {} /path/to/destination/ 
 ```
 
 
@@ -112,8 +112,11 @@ find . -name "*.txt" -exec cp {} /path/to/destination/ \;
 find . -name "*.txt" | xargs -I {} cp {} /path/to/destination/
 ```
 
-
-
+## example
+* 查找后复制
+```
+cp $(find . -type f -regex   '\./depth_env[0-9]+_cam2_frame1.jpg')  test/
+```
 
 
 
