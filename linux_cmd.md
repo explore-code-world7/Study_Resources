@@ -89,6 +89,12 @@ export PATH=$PATH:/directory
 find . -type f -regex   '\./depth_env[0-9]+_cam2_frame1.jpg'
 ```
 
+2. cam-0001-\d\d\d\d.png
+
+```bash
+cp $(ls | grep 'cam-0001-[0-9]{4}.png')  rgb/
+```
+
 
 # 命令行输出作为另一命令的输入
 
