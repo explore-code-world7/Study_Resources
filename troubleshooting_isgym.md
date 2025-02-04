@@ -66,3 +66,14 @@ trusted-host=mirrors.aliyun.com
 ```bash
 pip install -e . # in isaacgym category
 ```
+
+
+## [Error] [carb.gym.plugin] Failed to create SDF triangle mesh
+* clear cache
+* the process takes a little more time
+
+**link**: https://github.com/isaac-sim/IsaacGymEnvs/issues/53
+
+
+
+
