@@ -1,6 +1,8 @@
 # quaterion
 ## 定义
 https://zh.wikipedia.org/wiki/%E5%9B%9B%E5%85%83%E6%95%B8#%E7%94%A8%E9%80%94%E7%88%AD%E8%BE%AF
+### 乘法
+![图片](https://github.com/user-attachments/assets/4ce2d8fc-1cdf-4d53-8255-3f84032e88d8)
 
 * 四元数相乘并不表示对应旋转矩阵的角度相加
 
