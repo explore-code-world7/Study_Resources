@@ -1,4 +1,6 @@
 # plt的基本用法
+* plot画自变量-因变量关系图;
+* imshow presents numpy array images.
 
 Matplotlib 的 pyplot 模块提供了许多函数来创建和自定义图形。以下是一些常用的函数：
 
