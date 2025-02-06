@@ -32,3 +32,4 @@ optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 ```py
     optimizer.step()
 ```
+* [some little stupid but rich functions](https://stackoverflow.com/questions/59129812/how-to-avoid-cuda-out-of-memory-in-pytorch)
