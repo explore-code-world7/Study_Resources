@@ -70,3 +70,19 @@ print(instance.instance_variable)  # 输出: 10
 ## 总结
 
 `@classmethod` 使得你可以在类级别上定义方法，这些方法可以访问类的属性和方法，而不需要实例化类。它在需要访问类状态或创建类实例时非常有用。
+
+# sh
+## 删除
+* 文件夹+所有文件
+```py
+import shutil,os
+
+if os.path.exists(folder_path):
+    # 删除文件夹及其所有内容
+    shutil.rmtree(folder_path)
+
+```
+
+
+
+
