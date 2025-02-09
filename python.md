@@ -83,6 +83,50 @@ if os.path.exists(folder_path):
 
 ```
 
+# numpy.void
+
+在 Python 的 NumPy 库中，`numpy.void` 是一种特殊的数据类型，用于表示结构化数组中的元素。它通常用于存储具有不同数据类型的复合数据结构。`numpy.void` 实际上是一个封装了多个字段的对象，类似于 C 语言中的结构体。
+
+## 特点
+
+- `numpy.void` 对象可以包含多个字段，每个字段可以是不同的数据类型。
+- 它通常用于处理结构化数组（structured arrays）或记录数组（record arrays），这些数组的每个元素可以包含多个不同类型的值。
+
+## 如何构造 `numpy.void` 类型的元素
+
+要构造 `numpy.void` 类型的元素，通常需要先定义一个结构化数组的 dtype，然后使用这个 dtype 创建数组。以下是一个示例：
+
+```python
+import numpy as np
+
+# 定义结构化数组的 dtype
+dtype = np.dtype([('field1', np.int32), ('field2', np.float64), ('field3', 'U10')])
+
+# 创建一个结构化数组
+structured_array = np.zeros(1, dtype=dtype)
+
+# 访问和设置字段
+structured_array[0]['field1'] = 42
+structured_array[0]['field2'] = 3.14
+structured_array[0]['field3'] = 'Hello'
+
+# 获取 numpy.void 对象
+void_element = structured_array[0]
+
+print("Void Element:", void_element)  # 输出: Void Element: (42, 3.14, 'Hello')
+print("Type of void_element:", type(void_element))  # 输出: <class 'numpy.void'>
+```
+
+## 说明
+
+1. **定义 dtype**：使用 `np.dtype` 定义一个包含多个字段的结构化数据类型。每个字段都有名称和数据类型。
+2. **创建结构化数组**：使用 `np.zeros` 创建一个结构化数组，指定 dtype。
+3. **访问和设置字段**：可以通过字段名称访问和设置结构化数组中的字段值。
+4. **获取 `numpy.void` 对象**：访问结构化数组的元素时，会返回一个 `numpy.void` 对象。
+
+## 总结
+
+`numpy.void` 是用于表示结构化数组中元素的类型，允许存储不同数据类型的复合数据。通过定义结构化数组的 dtype，可以方便地创建和操作这种类型的元素。
 
 
 
