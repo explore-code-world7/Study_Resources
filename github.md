@@ -20,6 +20,8 @@ git commit --amend --reset-author --no-edit
 * Setting/Repositories/branch
 
 # delete commit points
+[link](https://stackoverflow.com/questions/1338728/how-do-i-delete-a-commit-from-a-branch)
+
 ## Method 1:
 ```bash
 git stash
