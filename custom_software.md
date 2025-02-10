@@ -1,3 +1,10 @@
+# video edit
+```
+sudo apt install openshot-qt
+```
+* video can be stored in any form includes mp4, webm
+
+
 # texstudio
 link: https://tug.org/texlive/quickinstall.html
 ```sh
