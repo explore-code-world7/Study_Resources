@@ -78,6 +78,9 @@ link: https://zh.safetydetectives.com/blog/%E6%9C%80%E4%BD%B3%E4%B8%AD%E5%9B%BD-
 ## privateVPN
 link: https://privatevpn.com/support/getting-started/linux/debian/network-manager-udp-recommended
 
+## expressvpn
+[link](https://www.expressvpn.com/support/vpn-setup/manual-config-for-linux-ubuntu-with-openvpn/)
+
 # office toolkit
 1. No wps
 2. Install baidunetdisk and okular is sufficient
