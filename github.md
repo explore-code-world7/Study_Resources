@@ -20,5 +20,16 @@ git commit --amend --reset-author --no-edit
 * Setting/Repositories/branch
 
 # delete commit points
+## Method 1:
+```bash
+git stash
+git reset --hard branch_id
+git stash pop/apply
+git add .
+git commit -m "illustration"
+```
 
-
+## Method 2:
+```bash
+git rebase -i branch_id
+```
