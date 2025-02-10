@@ -35,3 +35,11 @@ git commit -m "illustration"
 ```bash
 git rebase -i branch_id
 ```
+
+* 配置编辑器
+```bash
+git config --global core.editor "code --wait"  # 使用 VS Code
+git config --global core.editor "vim"   # 使用 vim
+git config --global core.editor "nano"  # 使用 nano
+```
+* 在git.rebase-todo文件中，保留需要的分支，删除不要的，close即可
