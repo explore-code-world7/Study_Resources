@@ -79,6 +79,7 @@ link: https://zh.safetydetectives.com/blog/%E6%9C%80%E4%BD%B3%E4%B8%AD%E5%9B%BD-
 * expressvpn主界面(username+code)：https://www.expressvpn.com/sign-in
 * 手动配置vpn(Activate): https://www.expressvpn.com/support/manage-account/find-manual-configuration-credentials/#top
 * 自动配置vpn(username+code2): https://www.expressvpn.com/support/vpn-setup/app-for-linux/#install
+* 取消续费：https://www.expressvpn.com/support/manage-account/cancel-expressvpn-subscription/
 
 
 ## privateVPN
