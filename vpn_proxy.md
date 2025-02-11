@@ -71,9 +71,9 @@
 - 如果你在安装或使用过程中遇到问题，可以查阅 Cisco 的文档或联系你的 IT 支持团队。
 
 # VPN
+## expressvpn
+* [link](https://www.expressvpn.com/support/vpn-setup/manual-config-for-linux-ubuntu-with-openvpn/)
 * 购买VPN需要注册银联账号
-## private internet access
-link: https://zh.safetydetectives.com/blog/%E6%9C%80%E4%BD%B3%E4%B8%AD%E5%9B%BD-vpn/
 * 直接用银联卡会一直 Payment Denied, transaction blocked到四
 * 可以考虑用Paypal账号
 * expressvpn主界面(username+code)：https://www.expressvpn.com/sign-in
@@ -81,14 +81,15 @@ link: https://zh.safetydetectives.com/blog/%E6%9C%80%E4%BD%B3%E4%B8%AD%E5%9B%BD-
 * 自动配置vpn(username+code2): https://www.expressvpn.com/support/vpn-setup/app-for-linux/#install
 * 取消续费：https://www.expressvpn.com/support/manage-account/cancel-expressvpn-subscription/
 * 正式的VPN provide login to youtube
-* What's DNS Register: https://www.expressvpn.com/dns_settings
+* DDNS(used for device doesn't naively supports VPN to acquire corresponding service): https://www.expressvpn.com/support/vpn-setup/ddns-setup/
+  **site**: https://www.expressvpn.com/dns_settings
 
+
+## private internet access
+link: https://zh.safetydetectives.com/blog/%E6%9C%80%E4%BD%B3%E4%B8%AD%E5%9B%BD-vpn/
 
 ## privateVPN
 link: https://privatevpn.com/support/getting-started/linux/debian/network-manager-udp-recommended
-
-## expressvpn
-[link](https://www.expressvpn.com/support/vpn-setup/manual-config-for-linux-ubuntu-with-openvpn/)
 
 # office toolkit
 1. No wps
