@@ -83,6 +83,13 @@
 * 正式的VPN provide login to youtube
 * DDNS(used for device doesn't naively supports VPN to acquire corresponding service): https://www.expressvpn.com/support/vpn-setup/ddns-setup/
   **site**: https://www.expressvpn.com/dns_settings
+* network_lock: https://www.expressvpn.com/support/knowledge-hub/network-lock/
+```bash
+expressvpn preferences set block_all true
+expressvpn activate
+expressvpn connect
+expressvpn preferences set network_lock on
+```
 
 
 ## private internet access
