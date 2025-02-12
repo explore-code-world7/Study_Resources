@@ -1,3 +1,23 @@
+# *
+```python
+def model(x, *, t, y, name, num_classes, reuse=tf.AUTO_REUSE, ch, out_ch, ch_mult=(1, 2, 4, 8), num_res_blocks,
+          attn_resolutions, dropout=0., resamp_with_conv=True):
+  B, S, _, _ = x.shape
+  assert x.dtype == tf.float32 and x.shape[2] == S
+  assert t.dtype in [tf.int32, tf.int64]
+  num_resolutions = len(ch_mult)
+```
+
+在 Python 中，* 的使用在函数定义中有特定的含义。它用于指示在 * 之后的参数必须以关键字参数的形式传递。这意味着在调用该函数时，所有在 * 后面的参数都不能通过位置参数传递，必须使用关键字来指定。
+
+在你提供的 model 函数定义中，* 的作用如下：
+
+    强制使用关键字参数：在 * 之后的参数（如 t, y, name, num_classes, reuse, ch, out_ch, ch_mult, num_res_blocks, attn_resolutions, dropout, resamp_with_conv）必须以关键字的形式传递。例如，调用该函数时，必须使用 model(x, t=t_value, y=y_value, name='model_name', ...) 的形式，而不能简单地使用位置参数 model(x, t_value, y_value, 'model_name', ...)。
+
+    提高可读性：这种方式可以提高函数调用的可读性，尤其是当函数参数较多时。使用关键字参数可以清楚地表明每个参数的含义，减少混淆。
+
+    避免参数顺序错误：强制使用关键字参数可以避免在调用函数时因参数顺序错误而导致的错误。
+
 # =
 * 使用 = 将一个对象赋值给一个变量时，实际上是将该对象的引用（而不是对象本身）赋给变量。
 * 对b 的修改也会影响到 对a的修改，因为b,a引用同一个对象。
