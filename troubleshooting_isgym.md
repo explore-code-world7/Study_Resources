@@ -74,6 +74,9 @@ pip install -e . # in isaacgym category
 
 **link**: https://github.com/isaac-sim/IsaacGymEnvs/issues/53
 
-
+## Building wheel for pysdf (setup.py) ... error
+```python
+sudo apt install build-essential
+```
 
 
