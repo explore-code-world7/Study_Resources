@@ -1,0 +1,13 @@
+# VSCode
+1. 运行ipynb出现未安装kernel,安装后，要==restart kernel==,才不会持续报错
+
+
+
+# pip 
+* 清除缓存
+```py
+pip cache purge
+```
+* 设置超时
+
+# 
