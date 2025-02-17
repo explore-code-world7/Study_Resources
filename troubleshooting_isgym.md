@@ -80,3 +80,7 @@ sudo apt install build-essential
 ```
 
 
+## DEPRECATION: Legacy editable install of isaacgymenvs==1.5.1
+link: https://github.com/pypa/pip/issues/11457
+
+
