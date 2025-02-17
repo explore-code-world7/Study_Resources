@@ -91,6 +91,9 @@ expressvpn connect
 expressvpn preferences set network_lock on
 ```
 
+## 使用指南
+1. 开启random mac后，disconnect会默认断开连接
+2. 之后再次连接无效，必须断开有线连接，关闭wired，再次重启，才能connect连接
 
 ## private internet access
 link: https://zh.safetydetectives.com/blog/%E6%9C%80%E4%BD%B3%E4%B8%AD%E5%9B%BD-vpn/
