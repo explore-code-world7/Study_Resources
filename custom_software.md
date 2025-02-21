@@ -1,4 +1,8 @@
 # libre translate
+```
+sudo apt install dialect
+```
+
 在 Ubuntu 上安装 LibreTranslate 可以通过以下步骤进行：
 
 ## 方法一：使用 Docker 安装
