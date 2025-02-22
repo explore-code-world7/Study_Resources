@@ -79,6 +79,9 @@ sudo apt-get install xzdec        # for tlmgr
 ```sh
 sudo snap install okular --beta
 ```
+## set background color
+![图片](https://github.com/user-attachments/assets/d549b68c-2ebd-426f-9781-150b62ed0d63)
+
 
 # conda/pip
 * ~/.pip/pip.conf
