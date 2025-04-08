@@ -1,5 +1,5 @@
 
-# 安装
+# 安装(已解决)
 when I implement the following command according to [Official Install COurses](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/binaries_installation.html)
 ```python
 ./isaaclab.sh --install # or "./isaaclab.sh -i"
