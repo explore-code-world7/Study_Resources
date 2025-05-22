@@ -1,33 +1,39 @@
 # 把文件file转为todos
+
 ```
 printf "%s\n" *>> read.md
 ```
 
 # 终端编辑器(vi,当nano不可用)
+
 * 删除整行——dd/D
 * 跳转到最后一行——G
 * 跳转到第一行——gg
 * 跳转到下一行——k
 * 跳转到上一行——o
 
-
 # 软件包(snap+apt)
+
 ## 查看软件版本
+
 ```sh
 sudo snap info okular
 ```
 
 # 环境变量查看+修改
+
 ## $PATH
+
 ```sh
 export PATH=$PATH:/directory
 ```
 
-
 # regular strings
-link：https://www.runoob.com/regexp/regexp-syntax.html
+
+[正则表达式 &#8211; 语法 | 菜鸟教程](https://www.runoob.com/regexp/regexp-syntax.html)
 
 ## grammar
+
 正则表达式的基本语法包括多种元素和构造，用于匹配字符串中的特定模式。以下是一些常见的基本语法元素：
 
 ### 1. 字符类
@@ -85,11 +91,14 @@ link：https://www.runoob.com/regexp/regexp-syntax.html
 正则表达式的基本语法提供了强大的文本匹配能力。理解这些基本构造可以帮助你编写有效的正则表达式来处理各种文本处理任务。
 
 ## example
+
 1. 在当前目录下匹配'depth_env'开头，'_cam2_frame1.jpg'结尾，中间是数字
- * 注意find查找的结果，会以'./'开头
-```bash
-find . -type f -regex   '\./depth_env[0-9]+_cam2_frame1.jpg'
-```
+   
+   * 注意find查找的结果，会以'./'开头
+     
+     ```bash
+     find . -type f -regex   '\./depth_env[0-9]+_cam2_frame1.jpg'
+     ```
 
 2. cam-0001-\d\d\d\d.png
 
@@ -99,10 +108,10 @@ cp $(ls | grep 'cam-0001-[0-9]{4}.png')  rgb/
 
 * find /ls 不支持{n}匹配，也不支持\d
 
-
 # 命令行输出作为另一命令的输入
 
 ## 1. 命令替换(Best!)
+
 * 可以使用反引号（`）或 $() 语法来将 find 命令的输出作为 cp 命令的参数。
 
 ```bash
@@ -110,53 +119,60 @@ cp $(find . -name "*.txt") /path/to/destination/
 ```
 
 ## 2. --exec
+
 find 命令的 -exec 选项允许你对找到的每个文件执行一个命令。你可以在 -exec 后面直接使用 cp 命令。
 
 ```bash
 find . -name "*.txt" -exec cp {} /path/to/destination/ 
 ```
 
-
 ## 3. 管道和xargs
+
 * 可以使用 xargs 命令将 find 的输出传递给 cp 命令。xargs 会将输入转换为命令行参数。
 
 ```bash
-find . -name "*.txt" | xargs -I {} cp {} /path/to/destination/
+find . -name ".*.txt" | xargs -I {} cp {} /path/to/destination/
 ```
 
 ## example
+
 * 查找后复制
 
 ```
 cp $(find . -type f -regex   '\./depth_env[0-9]+_cam2_frame1.jpg')  test/
 ```
 
+# 查找
 
+* 按正则表达式
 
+```bash
+find . -iregex "*.txt"
+```
 
+* 按文件名
 
+```bash
+find . -name "*txt"
+```
 
+* 按文件+路径名
 
+```bash
+find -wholename "/path/to/file"
+```
 
+* 具体见
 
+```bash
+find --help
+```
 
+# wget下载
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```bash
+wget https://example.com/file.zip          # 下载单个文件
+wget -O renamed_file.zip https://example.com/file.zip  # 指定保存文件名
+wget -c https://example.com/bigfile.iso   # 断点续传
+wget -r --no-parent https://example.com/path/  # 递归下载（不跨越父目录）
+```

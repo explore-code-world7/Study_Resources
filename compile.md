@@ -1,12 +1,14 @@
-
 # C++
+
 ## clone source code
+
 ```bash
 git clone https://github.com/catchorg/Catch2.git
 cd Catch2
 ```
 
 ## compile files
+
 ```bash
 mkdir build
 cd build
@@ -16,6 +18,7 @@ sudo make install
 ```
 
 ## resolution
+
 在使用 CMake 构建项目时，`cmake ..`、`make` 和 `sudo make install` 是三个重要的命令，它们的作用分别如下：
 
 ### 1. `cmake ..`
@@ -45,6 +48,3 @@ sudo make install
 通过这些步骤，您可以成功构建和安装 CMake 项目。如果您有其他问题或需要进一步的帮助，请随时问我！
 
 # Python
-
-
-
