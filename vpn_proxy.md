@@ -94,6 +94,22 @@ expressvpn preferences set network_lock on
 ## 使用指南
 1. 开启random mac后，disconnect会默认断开连接
 2. 之后再次连接无效，必须断开有线连接，关闭wired，再次重启，才能connect连接
+3. Random Mac for campus, reserved for packet wifi.
+
+## MAC分配方式
+在Linux中，MAC（Media Access Control）地址配置涉及到网络接口的唯一标识符。
+1. 预留（Reserved）：
+   - 预留MAC地址通常是指为特定用途或设备保留的地址。这些地址可能不会被分配给普通设备，而是用于特定的网络管理或协议。
+
+2. 永久（Permanent）：
+   - 永久MAC地址是指在网络接口卡（NIC）上硬编码的地址。这是设备出厂时分配的MAC地址，通常不会改变。它是设备的唯一标识符，通常用于网络通信。
+
+3. 随机（Random）：
+   - 随机MAC地址是指在每次连接到网络时生成的随机地址。这种方式可以提高隐私保护，防止设备被追踪。许多现代操作系统在Wi-Fi连接时会使用随机MAC地址。
+
+4. 固定（Static）：
+   - 固定MAC地址是指用户手动配置的MAC地址。与永久MAC地址不同，固定MAC地址可以根据需要进行更改。管理员可以在网络配置中指定一个特定的MAC地址，以便在网络中使用。
+
 
 ## private internet access
 link: https://zh.safetydetectives.com/blog/%E6%9C%80%E4%BD%B3%E4%B8%AD%E5%9B%BD-vpn/

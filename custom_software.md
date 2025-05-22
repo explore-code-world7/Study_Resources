@@ -1,3 +1,65 @@
+# libre translate
+```
+sudo apt install dialect
+```
+
+在 Ubuntu 上安装 LibreTranslate 可以通过以下步骤进行：
+
+## 方法一：使用 Docker 安装
+
+1. **安装 Docker**（如果尚未安装）：
+   ```bash
+   sudo apt update
+   sudo apt install docker.io
+   ```
+
+2. **启动 Docker 服务**：
+   ```bash
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   ```
+
+3. **拉取 LibreTranslate 镜像并运行**：
+   ```bash
+   sudo docker run -p 5000:5000 libretranslate/libretranslate
+   ```
+
+4. **访问 LibreTranslate**：
+   打开浏览器并访问 `http://localhost:5000`。
+
+## 方法二：从源代码安装
+
+1. **安装依赖项**：
+   ```bash
+   sudo apt update
+   sudo apt install python3 python3-pip git
+   ```
+
+2. **克隆 LibreTranslate 仓库**：
+   ```bash
+   git clone https://github.com/LibreTranslate/LibreTranslate.git
+   cd LibreTranslate
+   ```
+
+3. **安装 Python 依赖项**：
+   ```bash
+   pip3 install -r requirements.txt
+   ```
+
+4. **运行 LibreTranslate**：
+   ```bash
+   python3 app.py
+   ```
+
+5. **访问 LibreTranslate**：
+   打开浏览器并访问 `http://localhost:5000`。
+
+## 注意事项
+- 确保你的系统已安装 Python 3 和 pip。
+- 如果你选择从源代码安装，可能需要根据需要配置环境变量或其他设置。
+
+通过以上步骤，你应该能够在 Ubuntu 上成功安装并运行 LibreTranslate。
+
 # video edit
 
 ```
@@ -20,6 +82,9 @@ sudo apt-get install texlive-full texstudio # for latex
 ```sh
 sudo snap install okular --beta
 ```
+## set background color
+![图片](https://github.com/user-attachments/assets/d549b68c-2ebd-426f-9781-150b62ed0d63)
+
 
 # conda/pip
 
