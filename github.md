@@ -3,17 +3,33 @@
 * generate keys
 
 ```bash
-ssh-keygen -t  rsa
+ssh-keygen -t  rsa -f /path/to/key/name/without/suffix
+# default
 cat ~/.ssh/id_rsa.pub
+# if setting keyfile's location
+cat /path/to/key/name/without/suffix.pub
 ```
 
-* choose ssh login/upload
-  
-  ## remote: error: GH007: Your push would publish a private email address.
-  
-  [link](https://stackoverflow.com/questions/43863522/error-your-push-would-publish-a-private-email-address)
+* 将密钥添加到ssh-agent中，这样重装也能用
 
-* local email address不要设置得和github email addressx相同
+```bash
+eval "$(ssh-agent -s)"
+ssh-add  /path/to/key/name/without/suffix
+```
+
+* choose github界面的ssh login/upload
+
+* push to server
+
+```bash
+git push origin main
+```
+
+## remote: error: GH007: Your push would publish a private email address.
+
+[link](https://stackoverflow.com/questions/43863522/error-your-push-would-publish-a-private-email-address)
+
+- local email address不要设置得和github email addressx相同
   
   ```bash
   git config --global user.email "{ID}+{username}@users.noreply.github.com"
@@ -22,10 +38,10 @@ cat ~/.ssh/id_rsa.pub
   ```bash
   git commit --amend --reset-author --no-edit
   ```
-  
-  ## change default branch
 
-* Setting/Repositories/branch
+## change default branch
+
+- Setting/Repositories/branch
 
 # delete commit points
 
