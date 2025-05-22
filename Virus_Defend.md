@@ -21,5 +21,3 @@ clamscan -r /path/to/your/directory
   ps aux | grep freshclam
   sudo killall freshclam
   ```
-
-

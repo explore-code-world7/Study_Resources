@@ -11,15 +11,17 @@ lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 311, in check_co
 subprocess.CalledProcessError: Command '['which', 'c++']' returned non-zero exit status 1.
 
 ### solution
+
 ```cpp
 sudo apt install build-essentials
 ```
 
+## lib/libstdc++.so.6: version `GLIBCXX_3.4.32' not found
 
-##  lib/libstdc++.so.6: version `GLIBCXX_3.4.32' not found
 ImportError: /home/user_name/miniconda3/envs/env_name/lib/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /home/planet/.cache/torch_extensions/py38_cu121/gymtorch/gymtorch.so)
 
 ### solution
+
 [link](https://stackoverflow.com/questions/76974555/glibcxx-3-4-32-not-found-error-at-runtime-gcc-13-2-0)
 
 ```bash
@@ -31,28 +33,39 @@ cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6 ~/miniconda3/envs/env_name/lib/
 ```
 
 ## [Error] [carb.gym.plugin] cudaImportExternalMemory failed on rgbImage buffer with error 999
+
 See dicusstion [here](https://forums.developer.nvidia.com/t/cudaimportexternalmemory-failed-on-rgbimage/212944)
 To save current, 
+
 ### solution
+
 ```bash
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
 ```
 
 # isgymenv-related
+
 ## error: Could not find suitable distribution for Requirement.parse('trimesh==3.23.5')
+
 在isaacgym下直接执行
+
 ```bash
 python setup.py install
 ```
+
 报错
+
 ```bash
 Reading https://pypi.org/simple/
 Download error on https://pypi.org/simple/: [Errno -3] Temporary failure in name resolution -- Some packages may not be found!
 No local packages or working download links found for trimesh==3.23.5
 error: Could not find suitable distribution for Requirement.parse('trimesh==3.23.5')
 ```
+
 ### solution
+
 换源
+
 ```bash
 $ cat ~/.pip/pip.conf 
 [global]
@@ -62,25 +75,26 @@ trusted-host=mirrors.aliyun.com
 ```
 
 ## ModuleNotFoundError: No module named 'isaacgymenvs.tasks.factory'
-* **implement following cmd for each decent python project** to install related packages
-```bash
-pip install -e . # in isaacgym category
-```
 
+* **implement following cmd for each decent python project** to install related packages
+  
+  ```bash
+  pip install -e . # in isaacgym category
+  ```
 
 ## [Error] [carb.gym.plugin] Failed to create SDF triangle mesh
+
 * clear cache
 * the process takes a little more time
 
 **link**: https://github.com/isaac-sim/IsaacGymEnvs/issues/53
 
 ## Building wheel for pysdf (setup.py) ... error
+
 ```python
 sudo apt install build-essential
 ```
 
-
 ## DEPRECATION: Legacy editable install of isaacgymenvs==1.5.1
+
 link: https://github.com/pypa/pip/issues/11457
-
-

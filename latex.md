@@ -1,4 +1,5 @@
 # paper structure content
+
 ## abstract
 
 ## background
@@ -9,9 +10,8 @@
 
 ## conclusion
 
-
-
 # 矩阵/vector
+
 ```latex
 \begin{equation}
 \begin{pmatrix}
@@ -33,25 +33,25 @@ b_3
 \end{equation}
 ```
 
-
 # 子图并排
+
 ```latex
 \begin{figure}[htbp]
-	\centering
-	\begin{subfigure}[b]{0.2\textwidth}
-		\centering
-		\includegraphics[width=0.45\textwidth]{pic/rgbimg_with_shadow.png}
-		\caption{RGB images with deep shadow}
-		\label{fig:image1}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.2\textwidth}
-		\centering
-		\includegraphics[width=0.45\textwidth]{pic/rgbimg_without_shadow.png}
-		\caption{RGB images after removing shadow}
-		\label{fig:image2}
-	\end{subfigure}
-	\caption{Shadow Schema}
-	\label{fig:subfigures}
+    \centering
+    \begin{subfigure}[b]{0.2\textwidth}
+        \centering
+        \includegraphics[width=0.45\textwidth]{pic/rgbimg_with_shadow.png}
+        \caption{RGB images with deep shadow}
+        \label{fig:image1}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.2\textwidth}
+        \centering
+        \includegraphics[width=0.45\textwidth]{pic/rgbimg_without_shadow.png}
+        \caption{RGB images after removing shadow}
+        \label{fig:image2}
+    \end{subfigure}
+    \caption{Shadow Schema}
+    \label{fig:subfigures}
 \end{figure}
 ```
 
@@ -77,6 +77,7 @@ b_3
 ```
 
 # bib
+
 在 LaTeX 中使用 BibTeX 引用参考文献的基本步骤如下：
 
 ## 1. 创建 `.bib` 文件
@@ -157,4 +158,3 @@ b_3
 ### 总结
 
 通过以上步骤，你可以在 LaTeX 文档中使用 BibTeX 引用参考文献。确保正确设置 `.bib` 文件和引用命令，以便生成所需的参考文献列表。
-

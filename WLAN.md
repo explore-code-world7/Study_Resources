@@ -1,14 +1,14 @@
-
 # test skip wall
+
 curl -I https://www.google.com
 
-
 # means
+
 error: 
+
 ```bash
 curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL
 ```
-
 
 **2. 更新系统证书**
 
@@ -56,6 +56,7 @@ sudo apt update && sudo apt upgrade curl openssl
 ```
 
 ## 测试用
+
 ### **5. 强制指定 TLS 版本**
 
 某些服务器可能不支持旧版 TLS，强制指定版本尝试：
@@ -72,5 +73,3 @@ curl -k https://example.com
 ```
 
 ---
-
-

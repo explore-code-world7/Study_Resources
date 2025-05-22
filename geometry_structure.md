@@ -1,4 +1,5 @@
 # COLLADA
+
 introduction: https://www.collada.org/2005/11/COLLADASchema/
 
 wiki: https://www.khronos.org/collada/wiki/Getting_started_with_COLLADA#Learn_about_COLLADA
@@ -14,6 +15,7 @@ COLLADA（Collaborative Design Activity）是一种开放的文件格式，用�
 2. **XML 格式**：COLLADA 文件使用 XML（可扩展标记语言）格式，这使得文件易于阅读和编辑。XML 的结构化特性使得数据可以以层次化的方式组织。
 
 3. **支持多种数据类型**：
+   
    - **几何体**：包括顶点、法线、纹理坐标和面信息。
    - **材质**：定义了模型的外观，包括颜色、纹理和光照属性。
    - **动画**：支持骨骼动画和关键帧动画。

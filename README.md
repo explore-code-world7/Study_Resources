@@ -1,9 +1,6 @@
 # Study_Resources
+
 provide link and website for automatic learning
-
-
-
-
 
 # ROS
 
@@ -13,20 +10,9 @@ provide link and website for automatic learning
    1. rosdep init：https://mirrors.tuna.tsinghua.edu.cn/help/rosdistro/
    2. rosdep update：https://mirrors.tuna.tsinghua.edu.cn/help/github-raw/
 
-
-
-
-
-
 # unmanned aerial vehicle
 
 1. Nuttx：https://nuttx.apache.org/docs/latest/components/audio/index.html
-
-
-
-
-
-
 
 # Dataset
 
@@ -37,8 +23,3 @@ provide link and website for automatic learning
 | Jacquard      | https://jacquard.liris.cnrs.fr/                         |
 | cornell_grasp | https://www.kaggle.com/datasets/oneoneliu/cornell-grasp |
 |               |                                                         |
-
-
-
-
-

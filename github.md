@@ -13,8 +13,12 @@ cat /path/to/key/name/without/suffix.pub
 * 将密钥添加到ssh-agent中，这样重装也能用
 
 ```bash
-eval "$(ssh-agent -s)"
+eval "(ssh-agent -s)"
+# 添加密钥
 ssh-add  /path/to/key/name/without/suffix
+# list out& delete
+ssh-add -l
+ssh-add -d /path/to/key/name/without/suffix
 ```
 
 * choose github界面的ssh login/upload
@@ -100,3 +104,23 @@ To ssh://10.15.82.118:10022/home/chenlei/IsaacLab/.git
 ```python
 git checkout main
 ```
+
+# Git push error '[remote rejected] master -> master (branch is currently checked out)'
+
+https://stackoverflow.com/questions/2816369/git-push-error-remote-rejected-master-master-branch-is-currently-checked
+
+1. remote server create empty repo, without assign branch
+
+2. git push server main
+
+3. make remote repo bare
+
+```bash
+git config --bool core.bare true
+```
+
+## bare_repo
+
+https://stackoverflow.com/questions/2816369/git-push-error-remote-rejected-master-master-branch-is-currently-checked
+
+# submodule

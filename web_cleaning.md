@@ -10,7 +10,9 @@
 
 1. 在uBlock Origin的控制面板
    ![图片](https://github.com/user-attachments/assets/d677564b-337f-4ccb-a55a-defb497ccb3a)
+
 2. 点击自定义静态规则
+
 3. 输入过滤规则
    
    ```sh
