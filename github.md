@@ -114,6 +114,26 @@ To ssh://10.15.82.118:10022/home/chenlei/IsaacLab/.git
  * [new branch]          main -> main
 ```
 
+## push/pull前的处理
+
+* 暂存
+
+```bash
+git stash
+```
+
+* 丢弃
+
+```bash
+git stash drop
+```
+
+* 恢复
+
+```bash
+git stash apply
+```
+
 ## later push
 
 * 之后的推送可能遇到如下问题
@@ -145,8 +165,140 @@ git config --bool core.bare true
 
 4. 需要推到服务器的时候服务器再次设为中央仓库即可～
 
+### ps
+
+* 有时，可能需要推送本地分支的最新提交到远程分支
+
+```bash
+git push origin HEAD:main
+```
+
+* 同理，推送某个分支
+
+```bash
+git push origin local_branch:remote_branch
+```
+
 ## bare_repo
 
 https://stackoverflow.com/questions/2816369/git-push-error-remote-rejected-master-master-branch-is-currently-checked
 
+# pull合并分支
+
+## rebase
+
+```bash
+git checkout feature
+git rebase master
+```
+
+![](https://i-blog.csdnimg.cn/blog_migrate/0e5ced3de53e575c3af477e2dd8a0ce6.png)
+
+* merge操作会生成一个新的节点，之前的提交分开显示。  
+
+* 而rebase操作不会生成新的节点，是将两个分支融合成一个线性的提交。
+
+![](assets/2025-05-23-21-10-42-image.png)
+
+# pull rebase
+
+- 变基是把远程分支当作当前分支的initial?
+
+> 变基是一种将一个分支的更改“移动”到另一个分支的顶部的操作。它的主要目的是使项目历史更加线性和清晰。
+> 
+> #### 工作原理：
+> 
+> - 当您执行变基时，Git 会将当前分支的所有提交“摘下”，然后将目标分支的最新提交应用到当前分支上，最后再将当前分支的提交逐个应用到目标分支的顶部。
+> - 变基会改变提交的历史，因此在公共分支上使用变基时需要小心，以避免影响其他开发者的工作。
+
+* 变基后，系统处于本地分支，但本地分支在远程分支的基前
+
+[git pull --rebase的正确使用很明显此时远程分支有新的 commit 未同步到本地，无法推送。正常情况下我 - 掘金](https://juejin.cn/post/6844903895160881166)
+
+```bash
+$ git pull origin main
+来自 github.com:isaac-sim/IsaacLab
+ * branch                  main       -> FETCH_HEAD
+提示：您有偏离的分支，需要指定如何调和它们。您可以在执行下一次
+提示：pull 操作之前执行下面一条命令来抑制本消息：
+提示：
+提示：  git config pull.rebase false  # 合并（缺省策略）
+提示：  git config pull.rebase true   # 变基
+提示：  git config pull.ff only       # 仅快进
+提示：
+提示：您可以将 "git config" 替换为 "git config --global" 以便为所有仓库设置
+提示：缺省的配置项。您也可以在每次执行 pull 命令时添加 --rebase、--no-rebase，
+提示：或者 --ff-only 参数覆盖缺省设置。
+```
+
+* 合并
+
+```bash
+git pull origin main --no-rebase
+```
+
+* 冲突信息如下
+
+```bash
+git pull origin main
+来自 github.com:isaac-sim/IsaacLab
+ * branch                  main       -> FETCH_HEAD
+自动合并 scripts/reinforcement_learning/rsl_rl/play.py
+冲突（内容）：合并冲突于 scripts/reinforcement_learning/rsl_rl/play.py
+自动合并 scripts/reinforcement_learning/rsl_rl/train.py
+自动合并 scripts/tutorials/03_envs/create_quadruped_base_env.py
+自动合并 source/isaaclab/isaaclab/managers/action_manager.py
+自动合并 source/isaaclab/isaaclab/managers/reward_manager.py
+自动合并 source/isaaclab/isaaclab/terrains/terrain_importer.py
+冲突（内容）：合并冲突于 source/isaaclab/isaaclab/terrains/terrain_importer.py
+自动合并 source/isaaclab_rl/isaaclab_rl/rsl_rl/__init__.py
+冲突（内容）：合并冲突于 source/isaaclab_rl/isaaclab_rl/rsl_rl/__init__.py
+自动合并 source/isaaclab_rl/isaaclab_rl/rsl_rl/exporter.py
+自动合并 source/isaaclab_rl/isaaclab_rl/rsl_rl/rl_cfg.py
+冲突（内容）：合并冲突于 source/isaaclab_rl/isaaclab_rl/rsl_rl/rl_cfg.py
+自动合并 source/isaaclab_rl/isaaclab_rl/rsl_rl/vecenv_wrapper.py
+自动合并失败，修正冲突然后提交修正的结果。
+```
+
+* 修正冲突信息
+
+![](assets/2025-05-23-20-37-04-image.png)
+
+* 提交
+
+```bash
+git add .
+git commit -m "fix conflicts"
+```
+
 # submodule
+
+* 链接：[Git: submodule 子模块简明教程 | A Quest After Perspectives](https://iphysresearch.github.io/blog/post/programing/git/git_submodule/)
+
+* Geek: https://www.geeksforgeeks.org/how-to-use-the-git-submodule-init-and-update-command/
+
+* clone远程仓库到本地文件夹
+
+```bash
+git submodule add https://github.com/iphysresearch/GWToolkit.git GWToolkit
+```
+
+* 老版拉取
+
+```bash
+git submodule update --init --recursive
+```
+
+* 查看
+
+```bash
+git status
+```
+
+
+
+* sub module也需要initialization
+
+```bash
+git submodule init
+```
