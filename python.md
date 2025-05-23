@@ -234,3 +234,29 @@ model = eval(model_class_name)()  # 注意这里的 () 是调用构造函数
 
 print(model)  # 输出模型结构
 ```
+
+# Sequence对象的使用
+
+* 定义
+
+```python
+# to build Sequence object
+from collections.abc import Sequence
+
+class MySequence(Sequence):
+    def __init__(self, data):
+        self._data = list(data)
+
+    def __len__(self):
+        return len(self._data)
+
+    def __getitem__(self, index):
+        return self._data[index]
+```
+
+* 调用
+
+```python
+print(self.robot.find_joints(name_keys=MySequence([".*_wrist_.*_joint", ".*_base_link_joint", ".*_index_.*_joint", 
+".*_middle_.*_joint", ".*_ring_.*_joint"])))
+```

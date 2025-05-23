@@ -79,9 +79,26 @@ git rebase -i branch_id
 
 # push to private server
 
+## first push
+
+* 本机仓库添加服务器addr
+
 ```python
 git remote remove server
 git remote add server  ssh://chenlei@10.15.82.118:10022/home/chenlei/IsaacLab/.git
+```
+
+* 注意服务器上，先建立~/IsaacLab空目录，之后直接`git init`的分支是"master"
+  
+  要切换分支
+
+```python
+git checkout main
+```
+
+* 本机执行推送
+
+```bash
 git push server main
 ```
 
@@ -97,27 +114,36 @@ To ssh://10.15.82.118:10022/home/chenlei/IsaacLab/.git
  * [new branch]          main -> main
 ```
 
-* 注意服务器上~/IsaacLab空目录，直接`git init`的分支是"master"
-  
-  要切换分支
+## later push
 
-```python
-git checkout main
+* 之后的推送可能遇到如下问题
+
+```bash
+Git push error '[remote rejected] master -> master (branch is currently checked out)'
 ```
-
-# Git push error '[remote rejected] master -> master (branch is currently checked out)'
 
 https://stackoverflow.com/questions/2816369/git-push-error-remote-rejected-master-master-branch-is-currently-checked
 
-1. remote server create empty repo, without assign branch
+* 解决办法
+1. 服务器设为中央仓库，接受推送
 
-2. git push server main
+```bash
+git  config  --bool  core.bare true
+```
 
-3. make remote repo bare
+2. 推送代码
+
+```bash
+git push server main
+```
+
+3. 关闭中央 仓库，来进行git reset, git add ., git commit等操作
 
 ```bash
 git config --bool core.bare true
 ```
+
+4. 需要推到服务器的时候服务器再次设为中央仓库即可～
 
 ## bare_repo
 

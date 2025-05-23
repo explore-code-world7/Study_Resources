@@ -1,3 +1,7 @@
+> Linux的命令，用suffix= "--help"就知道用法了
+
+
+
 # 把文件file转为todos
 
 ```
@@ -176,3 +180,13 @@ wget -O renamed_file.zip https://example.com/file.zip  # 指定保存文件名
 wget -c https://example.com/bigfile.iso   # 断点续传
 wget -r --no-parent https://example.com/path/  # 递归下载（不跨越父目录）
 ```
+
+# 查看目录大小
+
+```bash
+du -a -h -d 1
+```
+
+* -a= output hidden file
+
+* -h=humankind, -d=recursive depth
