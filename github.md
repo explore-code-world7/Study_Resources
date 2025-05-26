@@ -185,7 +185,7 @@ https://stackoverflow.com/questions/2816369/git-push-error-remote-rejected-maste
 
 # pull合并分支
 
-## rebase
+## rebase+merge
 
 ```bash
 git checkout feature
@@ -200,7 +200,7 @@ git rebase master
 
 ![](assets/2025-05-23-21-10-42-image.png)
 
-# pull rebase
+## pull rebase
 
 - 变基是把远程分支当作当前分支的initial?
 
@@ -271,6 +271,20 @@ git add .
 git commit -m "fix conflicts"
 ```
 
+## pull合并同一分支的不同提交
+
+```bash
+git pull server main
+git log
+```
+
+* 修正差异后
+
+```bash
+git add .
+git commit
+```
+
 # submodule
 
 * 链接：[Git: submodule 子模块简明教程 | A Quest After Perspectives](https://iphysresearch.github.io/blog/post/programing/git/git_submodule/)
@@ -294,8 +308,6 @@ git submodule update --init --recursive
 ```bash
 git status
 ```
-
-
 
 * sub module也需要initialization
 
