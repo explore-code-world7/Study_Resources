@@ -365,3 +365,26 @@ conda install <package-name>=<version>=<build>
 conda search pytorch
 conda install pytorch=2.5.1=py3.12_cuda12.4_cudnn9.1.0_0
 ```
+
+# reinstall nvidia-drive
+
+* link: https://askubuntu.com/questions/206283/how-can-i-uninstall-a-nvidia-driver-completely
+
+```bash
+sudo apt purge nvidia-driver-xxx
+sudo apt autoremove -y
+sudo apt autoclean
+```
+
+* install from .run
+
+```bash
+wget  https://us.download.nvidia.com/XFree86/Linux-x86_64/535.161.07/NVIDIA-Linux-x86_64-535.161.07.run
+sudo ./xxx.run
+```
+
+* 一直yes
+
+## cuda-driver map
+
+* link: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-major-component-versions

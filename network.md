@@ -30,12 +30,6 @@ sudo  iptables -A OUTPUT -p tcp  -d  13.226.61.0/24 -j DROP
 frame.number<304&&
 ```
 
-
-
-
-
-
-
 ## example
 
 - 发起到Amazon数据中心的连接
@@ -55,10 +49,6 @@ frame.number<304&&
 - 靠，这是ubuntu系统更新的服务器
 
 https://www.netify.ai/resources/ips/13.41.103.230
-
-
-
-
 
 # app-authority
 
