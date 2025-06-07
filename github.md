@@ -185,6 +185,12 @@ https://stackoverflow.com/questions/2816369/git-push-error-remote-rejected-maste
 
 # pull合并分支
 
+## update remote branch status
+
+```bash
+git remote prune origin
+```
+
 ## rebase+merge
 
 ```bash

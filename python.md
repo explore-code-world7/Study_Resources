@@ -260,3 +260,19 @@ class MySequence(Sequence):
 print(self.robot.find_joints(name_keys=MySequence([".*_wrist_.*_joint", ".*_base_link_joint", ".*_index_.*_joint", 
 ".*_middle_.*_joint", ".*_ring_.*_joint"])))
 ```
+
+# wrapper
+
+```python
+import functools
+
+def height_field_to_mesh(func: Callable) -> Callable:
+    @functools.wraps(func)
+    def wrapper(difficulty: float, cfg: HfTerrainBaseCfg):
+        ...
+        return xxx, xxx
+    return wrapper
+
+@height_field_to_mesh
+def random_uniform_terrain(difficulty: float, cfg: hf_terrains_cfg.HfRandomUniformTerrainCfg) -> np.ndarray:
+```
