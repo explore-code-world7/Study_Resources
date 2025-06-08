@@ -33,6 +33,19 @@ b_3
 \end{equation}
 ```
 
+# graph with 2 column
+
+```latex
+\begin{figure*}[t]
+	\centering
+	\includegraphics[width=0.9\textwidth]{HIM_process}
+	\caption{Process of HIM predict implicit observation and current velocuty based on historic observation, which is concatenated with proprioceptive observation for policy to generate action and training of HIM with SwAV}
+	\label{fig:himproces}
+\end{figure*}
+```
+
+
+
 # 子图并排
 
 ```latex
