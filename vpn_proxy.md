@@ -1,9 +1,20 @@
-# hiddify
+# clash-verge
+## Q: update subscribe fail
+```bash
+update filed even with Clash proxy: failed to fetch remote profile: 
+Failed to send HTTP request: error sending request
+```
+* solution——reinstall and reimport subscribe
+```bash
+sudo apt purge clash-verge
+sudo dpkg -i Class_xxx.deb
+```
 
+# hiddify
 * https://github.com/hiddify/hiddify-app/releases
 * sometimes hiddify fail due to wired network's inability to conenct despite their icon signal is light, log in the firefox first
-  
-  ## 使用方法：
+
+## 使用方法：
 1. 从第一次连接开始,就sudo用VPN
 2. 导入代理订阅链接
 3. 点击下面的Hiddify连接
