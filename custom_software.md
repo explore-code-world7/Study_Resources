@@ -18,7 +18,17 @@ sudo apt-get install texlive-full texstudio # for latex
 # okular
 
 ```sh
-sudo snap install okular --beta
+sudo apt install okular
+sudo apt purge kdeconnect
+sudo apt autoremove
+```
+
+# zotero
+
+https://github.com/retorquere/zotero-deb
+
+```bash
+
 ```
 
 # markdown

@@ -169,6 +169,12 @@ channels:
 
 - 添加nvidia package
 
+- 能用pip 用pip
+
+```bash
+pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu121
+```
+
 ```bash
 conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=12.1 -c pytorch -c nvidia
 ```
@@ -385,6 +391,30 @@ sudo ./xxx.run
 
 * 一直yes
 
+```bash
+wget https://us.download.nvidia.com/XFree86/Linux-x86_64/510.47.03/NVIDIA-Linux-x86_64-510.47.03.run
+sudo ./xxx.run
+```
+
 ## cuda-driver map
 
 * link: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-major-component-versions
+
+## cuda install
+
+```python
+sudo sh cuda_12.6.0_560.28.03_linux.run
+```
+
+* uninstall
+
+```bash
+To uninstall the CUDA Toolkit, run cuda-uninstaller in /usr/local/cuda-12.6/bin
+To uninstall the NVIDIA Driver, run nvidia-uninstall
+```
+
+* install compile tools
+
+```bash
+sudo apt install nvidia-cuda-toolkit
+```

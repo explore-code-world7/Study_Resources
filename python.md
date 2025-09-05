@@ -276,3 +276,36 @@ def height_field_to_mesh(func: Callable) -> Callable:
 @height_field_to_mesh
 def random_uniform_terrain(difficulty: float, cfg: hf_terrains_cfg.HfRandomUniformTerrainCfg) -> np.ndarray:
 ```
+
+# Json
+
+```python
+            with open(os.path.join(log_dir, "config.json"), "w") as f:
+                json.dump(log_cfg_dict, f, indent= 4)
+```
+
+# torch
+
+* 双树组索引和slice索引不同
+
+```python
+import torch
+
+a = torch.tensor([[1, 2, 3],
+                  [4, 5, 6],
+                  [7, 8, 9]])
+
+b = torch.tensor([0, 1, 2])  # 行索引
+c = torch.tensor([1, 2, 0])  # 列索引
+
+result = a[b, c]
+print(result)  # 输出: tensor([2, 6, 7])
+```
+
+在 Python 中，特别是使用 PyTorch 或 NumPy 等库时，`a[b, c]` 表示对张量 `a` 进行索引操作，其中 `b` 和 `c` 是索引数组或张量。
+
+## 解释
+
+- `a` 是一个多维张量（数组）。
+- `b` 和 `c` 是索引数组，通常是整数数组，表示要从 `a` 中提取的元素的位置。
+- `a[b, c]` 将返回一个新的张量，其中包含 `a` 中在位置 `(b[i], c[i])` 的元素，`i` 是索引的循环变量。

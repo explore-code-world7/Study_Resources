@@ -293,6 +293,8 @@ git commit
 
 # submodule
 
+> 添加自仓库，一定要先推到github上，再git add submodule
+
 * 链接：[Git: submodule 子模块简明教程 | A Quest After Perspectives](https://iphysresearch.github.io/blog/post/programing/git/git_submodule/)
 
 * Geek: https://www.geeksforgeeks.org/how-to-use-the-git-submodule-init-and-update-command/
@@ -320,3 +322,74 @@ git status
 ```bash
 git submodule init
 ```
+
+## 回退remote branch
+
+```bash
+git reset --hard xxx
+git push origin main --force
+```
+
+# points
+
+1. checkout只能恢复文件
+
+2. reset --hard可以更改指针
+
+3. commit更改上一次提交
+
+```bash
+git commit --amend
+```
+
+* 只更改提交信息
+
+```bash
+git commit --amend -m
+```
+
+* force push
+4. 快速回退当前分支、最新commit
+* 暂存区+工作区
+
+```bash
+git reset --hard HEAD
+```
+
+* 只恢复工作区
+
+```bash
+git checkout .
+```
+
+* 回退到当前分支，HEAD的上一个提交
+
+```bash
+git (reset --soft/hard )/(checkout) HEAD~1
+```
+
+5. 更改默认主分支
+
+```bash
+git config --global init.defaultBranch main
+```
+
+6. 展示全部提交
+
+```bash
+git reflog show --all
+```
+
+7. dsh@{n}
+
+```bash
+git stash 
+git stash list
+git stash apply stash@{n}
+```
+
+# LFS
+
+https://git-lfs.com/
+
+* 目前lfs push不支持ssh，但服务器的443端口不开放，所以只能手动cccv

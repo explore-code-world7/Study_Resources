@@ -1,5 +1,11 @@
 > Linux的命令，用suffix= "--help"就知道用法了
 
+## snap 关闭自动更新
+
+```bash
+sudo snap refresh --hold
+```
+
 # 把文件file转为todos
 
 ```
@@ -188,3 +194,12 @@ du -a -h -d 1
 * -a= output hidden file
 
 * -h=humankind, -d=recursive depth
+
+# ibus
+
+* 故障重启
+
+```bash
+ibus   restart
+ibus-daemon   -drx
+```

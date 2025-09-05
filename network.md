@@ -3,7 +3,7 @@
 * tcpdump
 
 ```bash
-sudo tcpdump -i   wlp3s0   src host 10.162.244.28 or src host fe80::9d25:81a:b27f:4e2 -v
+sudo tcpdump -i   wlp3s0   src host 10.162.197.159 or src host 2408:8642:893:efca:c50a:d7fa:9861:bb12 -v -w netlog.pcp
 ```
 
 * 用正则表达式
